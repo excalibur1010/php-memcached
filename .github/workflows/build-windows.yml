@@ -35,3 +35,8 @@ jobs:
         run: configure --enable-memcached --enable-memcached-session --enable-memcached-json --with-prefix=${{steps.setup-php.outputs.prefix}}
       - name: make
         run: nmake
+      - name: upload file
+        uses: actions/upload-artifact@v3
+        with:
+          name: php-memcached-${{steps.setup-php.outputs.prefix}}-${{matrix.arch}}
+          path: output/
