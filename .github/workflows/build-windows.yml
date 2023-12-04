@@ -7,7 +7,7 @@ jobs:
         shell: cmd
     strategy:
       matrix:
-          version: ['7.4', '8.0', '8.1', '8.2']
+          version: ['8.1', '8.2']
           arch: [x64, x86]
           ts: [nts, zts]
     runs-on: windows-latest
